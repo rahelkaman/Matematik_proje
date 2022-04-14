@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kilometreyi Mil'e çevir</title>
+</head>
+
+<body>
+    <h1>Km'yi Mil'e çevir</h1>
+    <input type="text" id="uzunluk" placeholder="Kilometre uzunluğunu girin">
+    <input type="button" value="Hesapla" id="hesapla">
+    <script>
+        /* MİL=0,621.X kilometre mil formülü*/
+        function hesapla() {
+            var sayi = document.getElementById("uzunluk").value;
+            sayi = Number(sayi);
+            var mil = 0.621 * sayi;
+            alert(sayi + "km=" + mil.toFixed(2) + "mil'dir");
+        }
+
+        var hesapBtn = document.getElementById("hesapla");
+
+        hesapBtn.onclick = hesapla;
+    </script>
+</body>

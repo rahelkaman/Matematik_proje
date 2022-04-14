@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kürenin Hacmini Hesapla</title>
+</head>
+
+<body>
+    <h1>Kürenin Hacmini Hesapla</h1>
+    <input type="text" id="yaricap" placeholder="Kürenin Yarıçapını Girin">
+    <input type="button" value="Hesapla" id="hesapla">
+    <script>
+
+        function hesapla() {
+
+            var sayi = document.getElementById("yaricap").value;
+
+            sayi = Number(sayi);
+
+            var hacim = (4 * Math.PI * sayi * sayi * sayi) / 3;
+
+            hacim = hacim.toFixed(2);
+            alert("Kürenin Hacmi: " + hacim + " birim küp");
+
+        }
+        var hesapBtn = document.getElementById("hesapla");
+
+        hesapBtn.onclick = hesapla;
+
+    </script>
